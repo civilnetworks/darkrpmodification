@@ -38,7 +38,7 @@ GM.Config.alltalk                       = false
 -- antimultirun - Disallow people joining your server(s) twice on the same account.
 GM.Config.antimultirun                  = true
 -- autovehiclelock - Enable/Disable automatic locking of a vehicle when a player exits it.
-GM.Config.autovehiclelock               = false
+GM.Config.autovehiclelock               = true
 -- babygod - people spawn godded (prevent spawn killing).
 GM.Config.babygod                       = true
 -- canforcedooropen - whether players can force an unownable door open with lockpick or battering ram or w/e.
@@ -58,7 +58,7 @@ GM.Config.cpcanarrestcp                 = false
 -- currencyLeft - The position of the currency symbol. true for left, false for right.
 GM.Config.currencyLeft                  = true
 -- customjobs - Enable/disable the /job command (personalized job names).
-GM.Config.customjobs                    = true
+GM.Config.customjobs                    = false
 -- customspawns - Enable/disable whether custom spawns should be used.
 GM.Config.customspawns                  = true
 -- deathblack - Whether or not a player sees black on death.
@@ -76,13 +76,13 @@ GM.Config.decalcleaner                  = false
 -- disallowClientsideScripts - Clientside scripts can be very useful for customizing the HUD or to aid in building. This option bans those scripts.
 GM.Config.disallowClientsideScripts     = true
 -- doorwarrants - Enable/disable Warrant requirement to enter property.
-GM.Config.doorwarrants                  = true
+GM.Config.doorwarrants                  = false
 -- dropmoneyondeath - Enable/disable whether people drop money on death.
 GM.Config.dropmoneyondeath              = false
 -- droppocketarrest - Enable/disable whether people drop the stuff in their pockets when they get arrested.
 GM.Config.droppocketarrest              = false
 -- droppocketdeath - Enable/disable whether people drop the stuff in their pockets when they die.
-GM.Config.droppocketdeath               = true
+GM.Config.droppocketdeath               = false
 -- dropweapondeath - Enable/disable whether people drop their current weapon when they die.
 GM.Config.dropweapondeath               = false
 -- Whether players can drop the weapons they spawn with.
@@ -122,7 +122,7 @@ GM.Config.needwantedforarrest           = false
 -- noguns - Enabling this feature bans Guns and Gun Dealers.
 GM.Config.noguns                        = false
 -- norespawn - Enable/Disable that people don't have to respawn when they change job.
-GM.Config.norespawn                     = true
+GM.Config.norespawn                     = false
 -- keepPickedUp - Enable/Disable keeping picked up weapons when switching jobs.
 GM.Config.keepPickedUp                  = false
 -- instantjob - Enable/Disable instantly respawning when norespawn is false
@@ -164,7 +164,7 @@ GM.Config.unlockdoorsonstart            = false
 -- voiceradius - Enable/disable local voice chat.
 GM.Config.voiceradius                   = true
 -- tax - Whether players pay taxes on their wallets.
-GM.Config.wallettax                     = true
+GM.Config.wallettax                     = false
 -- wantedrespawn - Whether players remain wanted on respawn.
 GM.Config.wantedrespawn                 = false
 -- wantedsuicide - Enable/Disable suiciding while you are wanted by the police.
@@ -182,9 +182,9 @@ GM.Config.weaponCheckerHideNoLicense    = false
 Value settings
 ]]
 -- adminnpcs - Whether or not NPCs should be admin only. 0 = everyone, 1 = admin or higher, 2 = superadmin or higher, 3 = rcon only
-GM.Config.adminnpcs                     = 2
+GM.Config.adminnpcs                     = 3
 -- adminsents - Whether or not SENTs should be admin only. 0 = everyone, 1 = admin or higher, 2 = superadmin or higher, 3 = rcon only
-GM.Config.adminsents                    = 2
+GM.Config.adminsents                    = 0
 -- adminvehicles - Whether or not vehicles should be admin only. 0 = everyone, 1 = admin or higher, 2 = superadmin or higher, 3 = rcon only
 GM.Config.adminvehicles                 = 2
 -- adminweapons - Who can spawn weapons: 0: admins only, 1: supadmins only, 2: no one, 3: everyone
@@ -251,7 +251,7 @@ GM.Config.normalsalary                  = 45
 -- npckillpay - Sets the money given for each NPC kill.
 GM.Config.npckillpay                    = 10
 -- paydelay - Sets how long it takes before people get salary.
-GM.Config.paydelay                      = 160
+GM.Config.paydelay                      = 60 * 10
 -- pocketitems - Sets the amount of objects the pocket can carry.
 GM.Config.pocketitems                   = 10
 -- pricecap - The maximum price of items (using /price).
@@ -265,7 +265,7 @@ GM.Config.quakechance                   = 4000
 -- respawntime - Minimum amount of seconds a player has to wait before respawning.
 GM.Config.respawntime                   = 1
 -- changejobtime - Minimum amount of seconds a player has to wait before changing job.
-GM.Config.changejobtime                 = 25
+GM.Config.changejobtime                 = 5
 -- runspeed - Sets the max running speed.
 GM.Config.runspeed                      = 240
 -- runspeed - Sets the max running speed for CP teams.
@@ -279,7 +279,7 @@ GM.Config.shipmentspawntime             = 10
 -- startinghealth - the health when you spawn.
 GM.Config.startinghealth                = 100
 -- startingmoney - your wallet when you join for the first time.
-GM.Config.startingmoney                 = 30000
+GM.Config.startingmoney                 = 1000
 -- stunstickdamage - amount of damage the stunstick will do to entities.
 -- When between 0 and 1, the damage is relative, where 1 takes the entire health of the entity.
 -- When above 1, the damage is absolute
@@ -612,10 +612,11 @@ GM.Config.DisallowDrop = {
 -- The list of weapons people spawn with.
 GM.Config.DefaultWeapons = {
     "keys",
-	"weapon_physcannon",
-	"gmod_camera",
-	"gmod_tool",
-	"weapon_physgun",
+    "weapon_physcannon",
+	"weapon_fists",
+	"vwar_shovel",
+	"dradio",
+	"vwar_animations",
 }
 
 -- Override categories.
@@ -665,9 +666,7 @@ GM.Config.CategoryOverride = {
 }
 
 -- The list of weapons admins spawn with, in addition to the default weapons, a job's weapons and GM.Config.AdminsCopWeapons.
-GM.Config.AdminWeapons = {
-    "weapon_keypadchecker",
-}
+GM.Config.AdminWeapons = {}
 
 -- These are the default laws, they're unchangeable in-game.
 GM.Config.DefaultLaws = {
