@@ -28,6 +28,23 @@ local function AddEntities()
 
 	loadedEntities = true
 
+ --[[DarkRP.createEntity("Radio", {
+        ent = "whk_radio",
+        model = "models/props_lab/citizenradio.mdl",
+        price = 500,
+        max = 1,
+        cmd = "/buymusicplayer",
+    })]]
+
+    --[[DarkRP.createEntity("Water", {
+        ent = "vwar_consumable_water",
+        model = "models/props_junk/glassbottle01a.mdl",
+        price = 250,
+        max = 1,
+        category = "Consumables",
+        cmd = "/vwar_water",
+    })]]
+
     DarkRP.createEntity("Cooking Pot", {
         ent = "vcraft_pot",
         model = "models/props_c17/metalPot001a.mdl",
@@ -51,6 +68,180 @@ local function AddEntities()
         max = 1,
         cmd = "/BuyMusicPlayer",
         allowed = {TEAM_NATO_COOK, TEAM_NWO_COOK},
+    })
+
+    -- Chemicals
+
+    DarkRP.createEntity("Chemical-435", {
+        ent = "vcraft_substance_s_chemical-435",
+        model = "models/labware/flask1.mdl",
+        price = 500,
+        max = 1,
+        category = "Chemicals",
+        cmd = "/BuyChem435",
+        customCheck = function(ply)
+            return ply:Team() == TEAM_RMP_SNCO 
+                or ply:Team() == TEAM_RMP_COMPANY_COMMANDER
+                or ply:Team() == TEAM_RMP_SQUAD_LEADER
+                or ply:Team() == TEAM_RMP_REGIMENTAL_COMMANDER
+                or ply:Team() == TEAM_AOR_SNCO
+                or ply:Team() == TEAM_AOR_COMPANY_COMMANDER
+                or ply:Team() == TEAM_AOR_SQUAD_LEADER
+                or ply:Team() == TEAM_AOR_REGIMENTAL_COMMANDER
+                or ply:Team() == TEAM_SAS_SNCO
+                or ply:Team() == TEAM_SAS_COMPANY_COMMANDER
+                or ply:Team() == TEAM_SAS_SQUAD_LEADER
+                or ply:Team() == TEAM_SAS_REGIMENTAL_COMMANDER
+                or ply:Team() == TEAM_STS_SNCO
+                or ply:Team() == TEAM_STS_COMPANY_COMMANDER
+                or ply:Team() == TEAM_STS_SQUAD_LEADER
+                or ply:Team() == TEAM_STS_REGIMENTAL_COMMANDER
+        end,
+        CustomCheckFailMsg = function(ply, entTable) 
+            return "You must be a SNCO+ in a police or special forces regiment to buy this chemical!" 
+        end,
+    })
+
+    -- Drones
+
+    DarkRP.createEntity("Spy Drone", {
+        ent = "entity_drone_spy",
+        model = "models/anthon/drone_body.mdl",
+        price = 1500,
+        max = 1,
+        category = "Drones",
+        cmd = "/buySpyDrone",
+        customCheck = function(ply)
+            return ply:Team() == TEAM_SAS_SNIPER 
+                or ply:Team() == TEAM_STS_SNIPER
+                or ply:Team() == TEAM_SAS_SPECIAL_OPERATIONS
+                or ply:Team() == TEAM_STS_SPECIAL_OPERATIONS
+        end,
+        CustomCheckFailMsg = function(ply, entTable) 
+            return "You must be a special forces sniper or specops to use the Spy Drone!" 
+        end,
+    })
+
+    DarkRP.createEntity("Bomb Drone", {
+        ent = "entity_drone_bomb",
+        model = "models/anthon/drone_body.mdl",
+        price = 1750,
+        max = 1,
+        category = "Drones",
+        cmd = "/BuyBombDrone",
+        customCheck = function(ply)
+            return ply:Team() == TEAM_ISAF_GRENADIER 
+                or ply:Team() == TEAM_IVG_EXPLOSIVES_EXPERT
+        end,
+        CustomCheckFailMsg = function(ply, entTable) 
+            return "You must be a infantry explosives expert to use the Bomb Drone!" 
+        end,
+    })
+
+    DarkRP.createEntity("Medic Drone", {
+        ent = "entity_drone_medic",
+        model = "models/anthon/drone_body.mdl",
+        price = 1500,
+        max = 1,
+        category = "Drones",
+        cmd = "/BuyMedicDrone",
+        customCheck = function(ply)
+            return ply:Team() == TEAM_17TH_ARMOURED_MEDIC 
+                or ply:Team() == TEAM_1STAL_MEDIC
+                or ply:Team() == TEAM_JAF_MEDIC
+                or ply:Team() == TEAM_SWB_MEDIC
+        end,
+        CustomCheckFailMsg = function(ply, entTable) 
+            return "You must be a medic to use the Medic Drone" 
+        end,
+    })
+
+    DarkRP.createEntity("Transporter Drone", {
+        ent = "entity_drone_transporter",
+        model = "models/anthon/drone_body.mdl",
+        price = 1500,
+        max = 1,
+        category = "Drones",
+        cmd = "/BuyTransportDrone",
+        customCheck = function(ply)
+            return ply:Team() == TEAM_17TH_ARMOURED_COMBAT_SUPPORT 
+                or ply:Team() == TEAM_1STAL_COMBAT_SUPPORT
+                or ply:Team() == TEAM_JAF_COMBAT_SUPPORT
+                or ply:Team() == TEAM_SWB_COMBAT_SUPPORT
+        end,
+        CustomCheckFailMsg = function(ply, entTable) 
+            return "You must be a armoured combat support to use the Transporter Drone" 
+        end,
+    })
+
+    DarkRP.createEntity("Police Drone", {
+        ent = "entity_drone_police",
+        model = "models/anthon/drone_body.mdl",
+        price = 1500,
+        max = 1,
+        category = "Drones",
+        cmd = "/BuyPoliceDrone",
+        customCheck = function(ply)
+            return ply:Team() == TEAM_RMP_SNCO 
+                or ply:Team() == TEAM_RMP_COMPANY_COMMANDER
+                or ply:Team() == TEAM_RMP_SQUAD_LEADER
+                or ply:Team() == TEAM_RMP_REGIMENTAL_COMMANDER
+                or ply:Team() == TEAM_AOR_SNCO
+                or ply:Team() == TEAM_AOR_COMPANY_COMMANDER
+                or ply:Team() == TEAM_AOR_SQUAD_LEADER
+                or ply:Team() == TEAM_AOR_REGIMENTAL_COMMANDER
+        end,
+        CustomCheckFailMsg = function(ply, entTable) 
+            return "You must be a police SNCO+ to use the Police Drone!" 
+        end,
+    })
+
+    DarkRP.createEntity("Gun Drone", {
+        ent = "entity_drone_gun",
+        model = "models/anthon/drone_body.mdl",
+        price = 1750,
+        max = 1,
+        category = "Drones",
+        cmd = "/BuyGunnerDrone",
+        customCheck = function(ply)
+            return ply:Team() == TEAM_RMP_REGIMENTAL_COMMANDER 
+                or ply:Team() == TEAM_AOR_REGIMENTAL_COMMANDER
+        end,
+        CustomCheckFailMsg = function(ply, entTable) 
+            return "You must be a police regimental commander to use the Gun Drone!" 
+        end,
+    })
+
+    DarkRP.createEntity("Drone", {
+        ent = "entity_drone_base",
+        model = "models/anthon/drone_body.mdl",
+        price = 1500,
+        max = 1,
+        category = "Drones",
+        cmd = "/BuyDrone",
+        customCheck = function(ply)
+            return ply:Team() == TEAM_NATO_HC_ROYAL_SPECOPS_BRIGADE_COMMANDER 
+                or ply:Team() == TEAM_NWO_SC_11TH_SURVEILLANCE_BRIGADE_COMMANDER
+        end,
+        CustomCheckFailMsg = function(ply, entTable) 
+            return "You must be a high command specops to use the Drone!" 
+        end,
+    })
+
+    DarkRP.createEntity("Gold Drone", {
+        ent = "entity_drone_gold",
+        model = "models/anthon/drone_body.mdl",
+        price = 1500,
+        max = 1,
+        category = "Drones",
+        cmd = "/BuyGoldenDrone",
+        customCheck = function(ply)
+            return ply:Team() == TEAM_NATO_HC_GENERAL_OF_THE_ARMY 
+                or ply:Team() == TEAM_NWO_SC_SECTOR_GENERAL
+        end,
+        CustomCheckFailMsg = function(ply, entTable) 
+            return "You must be the head of a faction to use the Gold Drone!" 
+        end,
     })
 
 end
