@@ -28,7 +28,7 @@ local function AddEntities()
 
 	loadedEntities = true
 
- --[[DarkRP.createEntity("Radio", {
+    --[[DarkRP.createEntity("Radio", {
         ent = "whk_radio",
         model = "models/props_lab/citizenradio.mdl",
         price = 500,
@@ -67,7 +67,7 @@ local function AddEntities()
         price = 10,
         max = 1,
         cmd = "/BuyMusicPlayer",
-        allowed = {TEAM_NATO_COOK, TEAM_NWO_COOK},
+        allowed = {TEAM_NATO_COOK, TEAM_USSR_COOK},
     })
 
     -- Chemicals
@@ -84,18 +84,18 @@ local function AddEntities()
                 or ply:Team() == TEAM_RMP_COMPANY_COMMANDER
                 or ply:Team() == TEAM_RMP_SQUAD_LEADER
                 or ply:Team() == TEAM_RMP_REGIMENTAL_COMMANDER
-                or ply:Team() == TEAM_AOR_SNCO
-                or ply:Team() == TEAM_AOR_COMPANY_COMMANDER
-                or ply:Team() == TEAM_AOR_SQUAD_LEADER
-                or ply:Team() == TEAM_AOR_REGIMENTAL_COMMANDER
+                or ply:Team() == TEAM_KGB_SNCO
+                or ply:Team() == TEAM_KGB_COMMISSIONED_OFFICER
+                or ply:Team() == TEAM_KGB_SENIOR_COMMISSIONED_OFFICER
+                or ply:Team() == TEAM_KGB_REGIMENTAL_COMMANDER
                 or ply:Team() == TEAM_SAS_SNCO
                 or ply:Team() == TEAM_SAS_COMPANY_COMMANDER
                 or ply:Team() == TEAM_SAS_SQUAD_LEADER
                 or ply:Team() == TEAM_SAS_REGIMENTAL_COMMANDER
-                or ply:Team() == TEAM_STS_SNCO
-                or ply:Team() == TEAM_STS_COMPANY_COMMANDER
-                or ply:Team() == TEAM_STS_SQUAD_LEADER
-                or ply:Team() == TEAM_STS_REGIMENTAL_COMMANDER
+                or ply:Team() == TEAM_SGRU_SNCO
+                or ply:Team() == TEAM_SRGU_SENIOR_COMMISSIONED_OFFICER
+                or ply:Team() == TEAM_SRGU_SENIOR_COMMISSIONED_OFFICER
+                or ply:Team() == TEAM_SGRU_REGIMENTAL_COMMANDER
         end,
         CustomCheckFailMsg = function(ply, entTable) 
             return "You must be a SNCO+ in a police or special forces regiment to buy this chemical!" 
@@ -113,9 +113,9 @@ local function AddEntities()
         cmd = "/buySpyDrone",
         customCheck = function(ply)
             return ply:Team() == TEAM_SAS_SNIPER 
-                or ply:Team() == TEAM_STS_SNIPER
+                or ply:Team() == TEAM_SGRU_SNIPER
                 or ply:Team() == TEAM_SAS_SPECIAL_OPERATIONS
-                or ply:Team() == TEAM_STS_SPECIAL_OPERATIONS
+                or ply:Team() == TEAM_SGRU_SPECIAL_OPERATIONS
         end,
         CustomCheckFailMsg = function(ply, entTable) 
             return "You must be a special forces sniper or specops to use the Spy Drone!" 
@@ -131,7 +131,7 @@ local function AddEntities()
         cmd = "/BuyBombDrone",
         customCheck = function(ply)
             return ply:Team() == TEAM_ISAF_GRENADIER 
-                or ply:Team() == TEAM_IVG_EXPLOSIVES_EXPERT
+                or ply:Team() == TEAM_40TH_MR_EXPLOSIVES_EXPERT
         end,
         CustomCheckFailMsg = function(ply, entTable) 
             return "You must be a infantry explosives expert to use the Bomb Drone!" 
@@ -147,9 +147,9 @@ local function AddEntities()
         cmd = "/BuyMedicDrone",
         customCheck = function(ply)
             return ply:Team() == TEAM_17TH_ARMOURED_MEDIC 
-                or ply:Team() == TEAM_1STAL_MEDIC
+                or ply:Team() == TEAM_11TH_GMR_MEDIC
                 or ply:Team() == TEAM_JAF_MEDIC
-                or ply:Team() == TEAM_SWB_MEDIC
+                or ply:Team() == TEAM_ABR_MEDIC
         end,
         CustomCheckFailMsg = function(ply, entTable) 
             return "You must be a medic to use the Medic Drone" 
@@ -165,9 +165,9 @@ local function AddEntities()
         cmd = "/BuyTransportDrone",
         customCheck = function(ply)
             return ply:Team() == TEAM_17TH_ARMOURED_COMBAT_SUPPORT 
-                or ply:Team() == TEAM_1STAL_COMBAT_SUPPORT
+                or ply:Team() == TEAM_11TH_GMR_COMBAT_SUPPORT
                 or ply:Team() == TEAM_JAF_COMBAT_SUPPORT
-                or ply:Team() == TEAM_SWB_COMBAT_SUPPORT
+                or ply:Team() == TEAM_ABR_COMBAT_SUPPORT
         end,
         CustomCheckFailMsg = function(ply, entTable) 
             return "You must be a armoured combat support to use the Transporter Drone" 
@@ -186,10 +186,10 @@ local function AddEntities()
                 or ply:Team() == TEAM_RMP_COMPANY_COMMANDER
                 or ply:Team() == TEAM_RMP_SQUAD_LEADER
                 or ply:Team() == TEAM_RMP_REGIMENTAL_COMMANDER
-                or ply:Team() == TEAM_AOR_SNCO
-                or ply:Team() == TEAM_AOR_COMPANY_COMMANDER
-                or ply:Team() == TEAM_AOR_SQUAD_LEADER
-                or ply:Team() == TEAM_AOR_REGIMENTAL_COMMANDER
+                or ply:Team() == TEAM_KGB_SNCO
+                or ply:Team() == TEAM_KGB_COMMISSIONED_OFFICER
+                or ply:Team() == TEAM_KGB_SENIOR_COMMISSIONED_OFFICER
+                or ply:Team() == TEAM_KGB_REGIMENTAL_COMMANDER
         end,
         CustomCheckFailMsg = function(ply, entTable) 
             return "You must be a police SNCO+ to use the Police Drone!" 
@@ -205,7 +205,7 @@ local function AddEntities()
         cmd = "/BuyGunnerDrone",
         customCheck = function(ply)
             return ply:Team() == TEAM_RMP_REGIMENTAL_COMMANDER 
-                or ply:Team() == TEAM_AOR_REGIMENTAL_COMMANDER
+                or ply:Team() == TEAM_KGB_REGIMENTAL_COMMANDER
         end,
         CustomCheckFailMsg = function(ply, entTable) 
             return "You must be a police regimental commander to use the Gun Drone!" 
@@ -221,7 +221,7 @@ local function AddEntities()
         cmd = "/BuyDrone",
         customCheck = function(ply)
             return ply:Team() == TEAM_NATO_HC_ROYAL_SPECOPS_BRIGADE_COMMANDER 
-                or ply:Team() == TEAM_NWO_SC_11TH_SURVEILLANCE_BRIGADE_COMMANDER
+                or ply:Team() == TEAM_SSHC_47TH_JOINT_SPECIAL_OPERATIONS_COMMANDER
         end,
         CustomCheckFailMsg = function(ply, entTable) 
             return "You must be a high command specops to use the Drone!" 
@@ -237,7 +237,7 @@ local function AddEntities()
         cmd = "/BuyGoldenDrone",
         customCheck = function(ply)
             return ply:Team() == TEAM_NATO_HC_GENERAL_OF_THE_ARMY 
-                or ply:Team() == TEAM_NWO_SC_SECTOR_GENERAL
+                or ply:Team() == TEAM_SSHC_GENERAL
         end,
         CustomCheckFailMsg = function(ply, entTable) 
             return "You must be the head of a faction to use the Gold Drone!" 

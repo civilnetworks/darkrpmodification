@@ -105,7 +105,7 @@ DarkRP.createCategory {
 -- NWO --
 
 DarkRP.createCategory{
-    name = "New World Order",
+    name = "USSR",
     categorises = "jobs",
     startExpanded = false,
     color = nwoColor,
@@ -113,7 +113,7 @@ DarkRP.createCategory{
     sortOrder = 101,
 }
 DarkRP.createCategory{
-    name = "NWO Supreme Council",
+    name = "USSR Stavka of the Supreme High Command",
     categorises = "jobs",
     startExpanded = false,
     color = nwoColor,
@@ -121,7 +121,7 @@ DarkRP.createCategory{
     sortOrder = 100,
 }
 DarkRP.createCategory{
-    name = "NWO Iron Vanguard",
+    name = "USSR 40th Marine Regiment",
     categorises = "jobs",
     startExpanded = false,
     color = nwoColor,
@@ -129,7 +129,7 @@ DarkRP.createCategory{
     sortOrder = 99,
 }
 DarkRP.createCategory{
-    name = "NWO Strategic Task Syndicate",
+    name = "USSR Spetsnaz GRU",
     categorises = "jobs",
     startExpanded = false,
     color = nwoColor,
@@ -137,7 +137,7 @@ DarkRP.createCategory{
     sortOrder = 98,
 }
 DarkRP.createCategory{
-    name = "NWO Agency of Rule",
+    name = "USSR Committee for State Security",
     categorises = "jobs",
     startExpanded = false,
     color = nwoColor,
@@ -145,7 +145,7 @@ DarkRP.createCategory{
     sortOrder = 97,
 }
 DarkRP.createCategory{
-    name = "NWO Steel Winged Battalion",
+    name = "USSR Airborne Trooper Regiment",
     categorises = "jobs",
     startExpanded = false,
     color = nwoColor,
@@ -153,7 +153,7 @@ DarkRP.createCategory{
     sortOrder = 96,
 }
 DarkRP.createCategory{
-    name = "NWO 1st Armoured Legion",
+    name = "USSR 11th Guards Mechanized Regiment",
     categorises = "jobs",
     startExpanded = false,
     color = nwoColor,
