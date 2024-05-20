@@ -237,7 +237,7 @@ local function AddEntities()
         cmd = "/BuyGoldenDrone",
         customCheck = function(ply)
             return ply:Team() == TEAM_NATO_HC_GENERAL_OF_THE_ARMY 
-                or ply:Team() == TEAM_SSHC_GENERAL
+                or ply:Team() == TEAM_SSHC_MARSHAL_OF_THE_SOVIET_UNION
         end,
         CustomCheckFailMsg = function(ply, entTable) 
             return "You must be the head of a faction to use the Gold Drone!" 
