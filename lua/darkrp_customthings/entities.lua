@@ -164,7 +164,7 @@ local function AddEntities()
         category = "Drones",
         cmd = "/BuyTransportDrone",
         customCheck = function(ply)
-            return ply:Team() == TEAM_17TH_ARMOURED_COMBAT_SUPPORT 
+            return ply:Team() == TEAM_17TH_COMBAT_SUPPORT 
                 or ply:Team() == TEAM_11TH_GMR_COMBAT_SUPPORT
                 or ply:Team() == TEAM_JAF_COMBAT_SUPPORT
                 or ply:Team() == TEAM_ABR_COMBAT_SUPPORT
