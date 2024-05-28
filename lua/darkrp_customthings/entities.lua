@@ -96,6 +96,8 @@ local function AddEntities()
                 or ply:Team() == TEAM_SRGU_SENIOR_COMMISSIONED_OFFICER
                 or ply:Team() == TEAM_SRGU_SENIOR_COMMISSIONED_OFFICER
                 or ply:Team() == TEAM_SGRU_REGIMENTAL_COMMANDER
+		or ply:Team() == TEAM_SSHC_47TH_JOINT_SPECIAL_OPERATIONS_COMMANDER
+		or ply:Team() == TEAM_NATO_HC_ROYAL_SPECOPS_BRIGADE_COMMANDER
         end,
         CustomCheckFailMsg = function(ply, entTable) 
             return "You must be a SNCO+ in a police or special forces regiment to buy this chemical!" 
