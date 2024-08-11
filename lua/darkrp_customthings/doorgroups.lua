@@ -636,8 +636,8 @@ AddDoorGroup("USSR - Officers",
 )
 end
 
-hook.Add("VJobEditorRegisterJobs", "vjobeditor", function()
-AddDoorGroups()
-end)
+-- hook.Add("VJobEditorRegisterJobs", "vjobeditor", function()
+-- AddDoorGroups()
+-- end)
 
 AddDoorGroups()
