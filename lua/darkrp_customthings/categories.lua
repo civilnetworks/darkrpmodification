@@ -34,7 +34,7 @@ DarkRP.createCategory {
 }
 
 DarkRP.createCategory {
-    name = "Crimson Blade",
+    name = "Terrorist",
     categorises = "jobs",
     startExpanded = false,
     color = Color(35, 35, 35),
@@ -121,7 +121,7 @@ DarkRP.createCategory{
     sortOrder = 100,
 }
 DarkRP.createCategory{
-    name = "USSR 40th Marine Regiment",
+    name = "USSR 13th Shock Army",
     categorises = "jobs",
     startExpanded = false,
     color = nwoColor,
