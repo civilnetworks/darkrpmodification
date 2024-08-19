@@ -124,22 +124,6 @@ local function AddEntities()
         end,
     })
 
-    DarkRP.createEntity("Bomb Drone", {
-        ent = "entity_drone_bomb",
-        model = "models/anthon/drone_body.mdl",
-        price = 1750,
-        max = 1,
-        category = "Drones",
-        cmd = "/BuyBombDrone",
-        customCheck = function(ply)
-            return ply:Team() == TEAM_ISAF_GRENADIER 
-                or ply:Team() == TEAM_40TH_MR_EXPLOSIVES_EXPERT
-        end,
-        CustomCheckFailMsg = function(ply, entTable) 
-            return "You must be a infantry explosives expert to use the Bomb Drone!" 
-        end,
-    })
-
     DarkRP.createEntity("Medic Drone", {
         ent = "entity_drone_medic",
         model = "models/anthon/drone_body.mdl",
