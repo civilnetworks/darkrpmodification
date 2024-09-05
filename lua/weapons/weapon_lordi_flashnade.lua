@@ -83,7 +83,7 @@ local ent_black = {
 function SWEP:Think()
 	if IsValid(self.Owner) then
 		if self.ThrowTime and self.ThrowTime <= CurTime() and (not self.Owner:KeyDown(IN_ATTACK) and not self.Owner:KeyDown(IN_ATTACK2) or (self.ThrowTime - CurTime()) <= -4) then
-			local flashtime = 4 + (self.ThrowTime - CurTime())
+			local flashtime = 1.5 + (self.ThrowTime - CurTime())
 			self.ThrowTime = nil
 			self:SendWeaponAnim(ACT_VM_THROW)
 			self.Owner:SetAnimation(PLAYER_ATTACK1)

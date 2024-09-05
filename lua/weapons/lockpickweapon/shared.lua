@@ -63,7 +63,7 @@ function SWEP:PrimaryAttack()
 		net.Send(self.Owner)
 	end -- The fading door tool only sets isFadingDoor serverside, for the lockpick to work we need this to be set clientside too.
 	if not IsValid(e) or trace.HitPos:Distance(self.Owner:GetShootPos()) > 100 or
-		(not e:isDoor() and not e:IsVehicle() and not string.find(string.lower(e:GetClass()), "vehicle") and not e.isFadingDoor) then
+		(not e:IsDoor() and not e:IsVehicle() and not string.find(string.lower(e:GetClass()), "vehicle") and not e.isFadingDoor) then
 		return
 	end
 
@@ -76,20 +76,11 @@ function SWEP:PrimaryAttack()
 	self.IsLockPicking = true
 	self.StartPick = CurTime()
 	if SERVER then
-		self.LockPickTime = math.Rand(20, 25)
-
-		if(HSkills)then
-			local treeName = HSkills:GetCurrentTree(self.Owner)
-			local pickSpeed, pickBonus = self.Owner:GetTreeSkill(treeName, "lockpicking")
-
-			self.LockPickTime = self.LockPickTime - pickBonus
-		end
-
+		self.LockPickTime = math.Rand(10, 30)
 		net.Start("lockpick_time")
 		net.WriteEntity(self)
 		net.WriteUInt(self.LockPickTime, 32)
 		net.Send(self.Owner)
-		hook.Call("lockpickStarted", nil, self:GetOwner(), e, trace)
 	end
 
 	self.EndPick = CurTime() + self.LockPickTime
@@ -133,7 +124,6 @@ function SWEP:Succeed()
 		trace.Entity:Fire("unlock", "", .5)
 		trace.Entity:Fire("open", "", .6)
 		trace.Entity:Fire("setanimation","open",.6)
-		hook.Call("onLockpickCompleted", nil, self.Owner, true, trace.Entity)
 	end
 	if SERVER then timer.Destroy("LockPickSounds") end
 	if CLIENT then timer.Destroy("LockPickDots") end
@@ -152,7 +142,7 @@ function SWEP:Think()
 		if not IsValid(trace.Entity) then
 			self:Fail()
 		end
-		if trace.HitPos:Distance(self.Owner:GetShootPos()) > 100 or (not trace.Entity:isDoor() and not trace.Entity:IsVehicle() and not string.find(string.lower(trace.Entity:GetClass()), "vehicle") and not trace.Entity.isFadingDoor) then
+		if trace.HitPos:Distance(self.Owner:GetShootPos()) > 100 or (not trace.Entity:IsDoor() and not trace.Entity:IsVehicle() and not string.find(string.lower(trace.Entity:GetClass()), "vehicle") and not trace.Entity.isFadingDoor) then
 			self:Fail()
 		end
 		if self.EndPick <= CurTime() then

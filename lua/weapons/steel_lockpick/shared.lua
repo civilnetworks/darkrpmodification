@@ -56,7 +56,6 @@ function SWEP:PrimaryAttack()
 
 	local trace = self.Owner:GetEyeTrace()
 	local e = trace.Entity
-	hook.Call("lockpickStarted", nil, self:GetOwner(), e, trace)
 	if(e:GetClass() == "func_movelinear")then return end
 	if SERVER and e.isFadingDoor then
 		net.Start("IsFadingDoor")
@@ -75,15 +74,7 @@ function SWEP:PrimaryAttack()
 	self.IsLockPicking = true
 	self.StartPick = CurTime()
 	if SERVER then
-		self.LockPickTime = math.Rand(15, 20)
-
-		if(HSkills)then
-			local treeName = HSkills:GetCurrentTree(self.Owner)
-			local pickSpeed, pickBonus = self.Owner:GetTreeSkill(treeName, "lockpicking")
-
-			self.LockPickTime = self.LockPickTime - pickBonus
-		end
-
+		self.LockPickTime = math.Rand(10, 20)
 		net.Start("lockpick_time")
 		net.WriteEntity(self)
 		net.WriteUInt(self.LockPickTime, 32)
@@ -132,7 +123,6 @@ function SWEP:Succeed()
 		trace.Entity:Fire("open", "", .6)
 		trace.Entity:Fire("setanimation","open",.6)
 	end
-	hook.Call("onLockpickCompleted", nil, self.Owner, true, trace.Entity)
 	if SERVER then timer.Destroy("LockPickSounds") end
 	if CLIENT then timer.Destroy("LockPickDots") end
 end
