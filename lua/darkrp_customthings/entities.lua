@@ -176,25 +176,11 @@ local function AddEntities()
                 or ply:Team() == TEAM_KGB_COMMISSIONED_OFFICER
                 or ply:Team() == TEAM_KGB_SENIOR_COMMISSIONED_OFFICER
                 or ply:Team() == TEAM_KGB_REGIMENTAL_COMMANDER
+                or ply:Team() == TEAM_KGB_DRONE_OPERATOR
+                or ply:Team() == TEAM_RMP_DRONE_OPERATOR
         end,
         CustomCheckFailMsg = function(ply, entTable) 
             return "You must be a police SNCO+ to use the Police Drone!" 
-        end,
-    })
-
-    DarkRP.createEntity("Gun Drone", {
-        ent = "entity_drone_gun",
-        model = "models/anthon/drone_body.mdl",
-        price = 1750,
-        max = 1,
-        category = "Drones",
-        cmd = "/BuyGunnerDrone",
-        customCheck = function(ply)
-            return ply:Team() == TEAM_RMP_REGIMENTAL_COMMANDER 
-                or ply:Team() == TEAM_KGB_REGIMENTAL_COMMANDER
-        end,
-        CustomCheckFailMsg = function(ply, entTable) 
-            return "You must be a police regimental commander to use the Gun Drone!" 
         end,
     })
 
