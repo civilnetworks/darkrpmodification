@@ -176,6 +176,8 @@ local function AddEntities()
                 or ply:Team() == TEAM_KGB_COMMISSIONED_OFFICER
                 or ply:Team() == TEAM_KGB_SENIOR_COMMISSIONED_OFFICER
                 or ply:Team() == TEAM_KGB_REGIMENTAL_COMMANDER
+                or ply:Team() == TEAM_KGB_DRONE_OPERATOR
+                or ply:Team() == TEAM_RMP_DRONE_OPERATOR
         end,
         CustomCheckFailMsg = function(ply, entTable) 
             return "You must be a police SNCO+ to use the Police Drone!" 
