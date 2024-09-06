@@ -182,22 +182,6 @@ local function AddEntities()
         end,
     })
 
-    DarkRP.createEntity("Gun Drone", {
-        ent = "entity_drone_gun",
-        model = "models/anthon/drone_body.mdl",
-        price = 1750,
-        max = 1,
-        category = "Drones",
-        cmd = "/BuyGunnerDrone",
-        customCheck = function(ply)
-            return ply:Team() == TEAM_RMP_REGIMENTAL_COMMANDER 
-                or ply:Team() == TEAM_KGB_REGIMENTAL_COMMANDER
-        end,
-        CustomCheckFailMsg = function(ply, entTable) 
-            return "You must be a police regimental commander to use the Gun Drone!" 
-        end,
-    })
-
     DarkRP.createEntity("Drone", {
         ent = "entity_drone_base",
         model = "models/anthon/drone_body.mdl",
