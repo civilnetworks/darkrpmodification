@@ -40,7 +40,7 @@ GM.Config.babygod                       = true
 -- canforcedooropen - whether players can force an unownable door open with lockpick or battering ram or w/e.
 GM.Config.canforcedooropen              = true
 -- chatsounds - sounds are played when some things are said in chat.
-GM.Config.chatsounds                    = true
+GM.Config.chatsounds                    = false
 -- chiefjailpos - Allow the Chief to set the jail positions.
 GM.Config.chiefjailpos                  = false
 -- cit_propertytax - Enable/disable property tax that is exclusive only for citizens.
