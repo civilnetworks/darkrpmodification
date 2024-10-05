@@ -184,7 +184,7 @@ AddDoorGroup("NATO High Command",
 	TEAM_NATO_HC_WAR_COUNCIL
 )
 
-AddDoorGroup("40th Marine Regiment",
+AddDoorGroup("13th Shock Army Regiment",
 	TEAM_40TH_MR_ANTI_ARMOUR,
 	TEAM_40TH_MR_ASSAULT_TROOPER,
 	TEAM_40TH_MR_AUTORIFLEMAN,
@@ -211,7 +211,7 @@ AddDoorGroup("40th Marine Regiment",
 	TEAM_USSR_WAR_COUNCIL
 )
 
-AddDoorGroup("Airborne Trooper Regiment",
+AddDoorGroup("Airborne Troopers Regiment",
 	TEAM_ABR_ANTI_AIR,
 	TEAM_ABR_AUTORIFLEMAN,
 	TEAM_ABR_COMBAT_SUPPORT,
@@ -238,7 +238,7 @@ AddDoorGroup("Airborne Trooper Regiment",
 	TEAM_USSR_WAR_COUNCIL
 )
 
-AddDoorGroup("Spetsnaz GRU",
+AddDoorGroup("Alpha Group",
 	TEAM_SGRU_ASSASSIN,
 	TEAM_SGRU_BREACHER,
 	TEAM_SGRU_COMMISSIONED_OFFICER,
@@ -265,7 +265,7 @@ AddDoorGroup("Spetsnaz GRU",
 	TEAM_USSR_WAR_COUNCIL
 )
 
-AddDoorGroup("11th Guards Mechanized Regiment",
+AddDoorGroup("10th Steel Division",
 	TEAM_11TH_GMR_ANTI_ARMOUR,
 	TEAM_11TH_GMR_AUTORIFLEMAN,
 	TEAM_11TH_GMR_COMBAT_SUPPORT,
@@ -316,7 +316,7 @@ AddDoorGroup("Committee for State Security",
 	TEAM_USSR_WAR_COUNCIL
 )
 
-AddDoorGroup("Stavka of the Supreme High Command",
+AddDoorGroup("USSR High Command",
 	TEAM_SSHC_1ST_SHOCK_ARMY_COMMANDER,
 	TEAM_SSHC_32ND_STRATEGIC_GROUP_COMMANDER,
 	TEAM_SSHC_47TH_JOINT_SPECIAL_OPERATIONS_COMMANDER,
