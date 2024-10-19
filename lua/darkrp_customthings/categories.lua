@@ -131,7 +131,15 @@ DarkRP.createCategory{
     sortOrder = 1,
 }
 DarkRP.createCategory{
-    name = "Site Affairs",
+    name = "Internal Security Department",
+    categorises = "jobs",
+    startExpanded = false,
+    color = siteadminColor,
+    canSee = function(ply) return true end,
+    sortOrder = 1,
+}
+DarkRP.createCategory{
+    name = "External Affairs",
     categorises = "jobs",
     startExpanded = false,
     color = siteadminColor,
