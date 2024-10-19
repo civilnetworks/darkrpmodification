@@ -2385,169 +2385,169 @@ TEAM_DIRECTOR_OF_RESEARCH = AddExtraTeam("Director of Research", {
     -- JobNickConfig = "Agent",
 -- })
 
-TEAM_DIA_Director = AddExtraTeam("Director of Internal Affairs", {
-    color = Color(128,0,0),
-    model = {
-        "models/player/Suits/male_05_open_tie.mdl",
-        "models/player/Suits/male_01_open_tie.mdl",
-        "models/player/Suits/male_02_open_tie.mdl",
-        "models/player/Suits/male_03_open_tie.mdl",
-        "models/player/Suits/male_04_open_tie.mdl",
-        "models/player/Suits/male_06_open_tie.mdl",
-        "models/player/Suits/male_07_open_tie.mdl",
-        "models/player/Suits/male_08_open_tie.mdl",
-        "models/player/Suits/male_09_open_tie.mdl",
-    },
-    description = [[The Director of Internal Affairs oversees the entirety of the Department of Internal Affairs, and is personally appointed by the Ethics Committee. They have the final say on what investigations may be run, unless overruled by a Level 5 member of staff.
-]],
-    weapons = {"vkeycard_level_4", "vwar_scp_personnel_tablet", "dradio", "vguns_silverghost", "vguns_p90", "weapon_cuff_elastic", "weapon_r_handcuffs", "gmod_camera", "vclipboard", "vwar_id_card_spy_team", "vwar_scp_interrogate", "weaponchecker"},
-    command = "dia_director",
-    max = 1,
-    admin = 0,
-    salary = 150,
-    hasLicense = false,
-    candemote = false,
-    category = "Site Affairs",
-    VWarTeam = "foundation",
-    PassiveXP = SUPPORT,
-    VWarHelmetCam = true,
-    VWarHelmetCamClearance = 3,
-    VWarDeploymentSpots = {
-        ["Facility Entrance"] = true,
-    },
-    VWarSkin = 9,
-    VComputersPrinterCreditRefundTime = 60 * 5,
-    VComputersDocument = "foundation/global_operations_database/manuals/internal_affairs/7189927",
-    JobNickConfig = "Dpt. Director",
-})
+-- TEAM_DIA_Director = AddExtraTeam("Director of Internal Affairs", {
+--     color = Color(128,0,0),
+--     model = {
+--         "models/player/Suits/male_05_open_tie.mdl",
+--         "models/player/Suits/male_01_open_tie.mdl",
+--         "models/player/Suits/male_02_open_tie.mdl",
+--         "models/player/Suits/male_03_open_tie.mdl",
+--         "models/player/Suits/male_04_open_tie.mdl",
+--         "models/player/Suits/male_06_open_tie.mdl",
+--         "models/player/Suits/male_07_open_tie.mdl",
+--         "models/player/Suits/male_08_open_tie.mdl",
+--         "models/player/Suits/male_09_open_tie.mdl",
+--     },
+--     description = [[The Director of Internal Affairs oversees the entirety of the Department of Internal Affairs, and is personally appointed by the Ethics Committee. They have the final say on what investigations may be run, unless overruled by a Level 5 member of staff.
+-- ]],
+--     weapons = {"vkeycard_level_4", "vwar_scp_personnel_tablet", "dradio", "vguns_silverghost", "vguns_p90", "weapon_cuff_elastic", "weapon_r_handcuffs", "gmod_camera", "vclipboard", "vwar_id_card_spy_team", "vwar_scp_interrogate", "weaponchecker"},
+--     command = "dia_director",
+--     max = 1,
+--     admin = 0,
+--     salary = 150,
+--     hasLicense = false,
+--     candemote = false,
+--     category = "Site Affairs",
+--     VWarTeam = "foundation",
+--     PassiveXP = SUPPORT,
+--     VWarHelmetCam = true,
+--     VWarHelmetCamClearance = 3,
+--     VWarDeploymentSpots = {
+--         ["Facility Entrance"] = true,
+--     },
+--     VWarSkin = 9,
+--     VComputersPrinterCreditRefundTime = 60 * 5,
+--     VComputersDocument = "foundation/global_operations_database/manuals/internal_affairs/7189927",
+--     JobNickConfig = "Dpt. Director",
+-- })
 
-TEAM_DIA_AMBASS = AddExtraTeam("Internal Affairs Ambassador", {
-    color = Color(128,0,0),
-    model = {
-        "models/player/Suits/male_05_shirt_tie.mdl",
-        "models/player/Suits/male_01_shirt_tie.mdl",
-        "models/player/Suits/male_02_shirt_tie.mdl",
-        "models/player/Suits/male_03_shirt_tie.mdl",
-        "models/player/Suits/male_04_shirt_tie.mdl",
-        "models/player/Suits/male_06_shirt_tie.mdl",
-        "models/player/Suits/male_07_shirt_tie.mdl",
-        "models/player/Suits/male_08_shirt_tie.mdl",
-        "models/player/Suits/male_09_shirt_tie.mdl",
-    },
-    description = [[Internal Affairs Ambassadors are senior agents within the Department of Internal Affairs.
+-- TEAM_DIA_AMBASS = AddExtraTeam("Internal Affairs Ambassador", {
+--     color = Color(128,0,0),
+--     model = {
+--         "models/player/Suits/male_05_shirt_tie.mdl",
+--         "models/player/Suits/male_01_shirt_tie.mdl",
+--         "models/player/Suits/male_02_shirt_tie.mdl",
+--         "models/player/Suits/male_03_shirt_tie.mdl",
+--         "models/player/Suits/male_04_shirt_tie.mdl",
+--         "models/player/Suits/male_06_shirt_tie.mdl",
+--         "models/player/Suits/male_07_shirt_tie.mdl",
+--         "models/player/Suits/male_08_shirt_tie.mdl",
+--         "models/player/Suits/male_09_shirt_tie.mdl",
+--     },
+--     description = [[Internal Affairs Ambassadors are senior agents within the Department of Internal Affairs.
 
-The Department of Internal Affairs (DIA) maintains the integrity of the Foundation. They perform internal investigations (either covert or public) in order to uncover corruption, breach of protocol, and other violations. They may perform investigations on behalf of the Overseer Council or the Ethics Committee.
+-- The Department of Internal Affairs (DIA) maintains the integrity of the Foundation. They perform internal investigations (either covert or public) in order to uncover corruption, breach of protocol, and other violations. They may perform investigations on behalf of the Overseer Council or the Ethics Committee.
 
-All DIA members are expected to read the DIA manuals located in the SCiPNET computer system. Failure to follow these manuals may result in your ability to run operations being revoked.
-]],
-    weapons = {"vkeycard_level_4", "vwar_scp_personnel_tablet", "dradio", "vguns_silverghost", "vguns_p90", "weapon_cuff_elastic", "weapon_r_handcuffs", "gmod_camera", "vclipboard", "vwar_id_card_spy_team", "vwar_scp_interrogate", "weaponchecker"},
-    command = "dia_ambas",
-    max = 3,
-    admin = 0,
-    salary = 100,
-    hasLicense = false,
-    candemote = false,
-    category = "Site Affairs",
-    VWarTeam = "foundation",
-    PassiveXP = SUPPORT,
-    VWarHelmetCam = true,
-    VWarHelmetCamClearance = 3,
-    VWarDeploymentSpots = {
-        ["Facility Entrance"] = true,
-    },
-    VWarSkin = 1,
-    VComputersPrinterCreditRefundTime = 60 * 10,
-    VComputersDocument = "foundation/global_operations_database/manuals/internal_affairs/7189927",
-    JobNickConfig = "Ambassador",
-})
+-- All DIA members are expected to read the DIA manuals located in the SCiPNET computer system. Failure to follow these manuals may result in your ability to run operations being revoked.
+-- ]],
+--     weapons = {"vkeycard_level_4", "vwar_scp_personnel_tablet", "dradio", "vguns_silverghost", "vguns_p90", "weapon_cuff_elastic", "weapon_r_handcuffs", "gmod_camera", "vclipboard", "vwar_id_card_spy_team", "vwar_scp_interrogate", "weaponchecker"},
+--     command = "dia_ambas",
+--     max = 3,
+--     admin = 0,
+--     salary = 100,
+--     hasLicense = false,
+--     candemote = false,
+--     category = "Site Affairs",
+--     VWarTeam = "foundation",
+--     PassiveXP = SUPPORT,
+--     VWarHelmetCam = true,
+--     VWarHelmetCamClearance = 3,
+--     VWarDeploymentSpots = {
+--         ["Facility Entrance"] = true,
+--     },
+--     VWarSkin = 1,
+--     VComputersPrinterCreditRefundTime = 60 * 10,
+--     VComputersDocument = "foundation/global_operations_database/manuals/internal_affairs/7189927",
+--     JobNickConfig = "Ambassador",
+-- })
 
-TEAM_DIA_AGENT = AddExtraTeam("Internal Affairs Agent", {
-    color = Color(128,0,0),
-    model = {
-        "models/player/Suits/male_08_shirt_tie.mdl",
-        "models/player/Suits/male_01_shirt_tie.mdl",
-        "models/player/Suits/male_02_shirt_tie.mdl",
-        "models/player/Suits/male_03_shirt_tie.mdl",
-        "models/player/Suits/male_04_shirt_tie.mdl",
-        "models/player/Suits/male_05_shirt_tie.mdl",
-        "models/player/Suits/male_06_shirt_tie.mdl",
-        "models/player/Suits/male_07_shirt_tie.mdl",
-        "models/player/Suits/male_09_shirt_tie.mdl",
-    },
-    description = [[Internal Affairs Agents work within the Department of Internal Affairs.
+-- TEAM_DIA_AGENT = AddExtraTeam("Internal Affairs Agent", {
+--     color = Color(128,0,0),
+--     model = {
+--         "models/player/Suits/male_08_shirt_tie.mdl",
+--         "models/player/Suits/male_01_shirt_tie.mdl",
+--         "models/player/Suits/male_02_shirt_tie.mdl",
+--         "models/player/Suits/male_03_shirt_tie.mdl",
+--         "models/player/Suits/male_04_shirt_tie.mdl",
+--         "models/player/Suits/male_05_shirt_tie.mdl",
+--         "models/player/Suits/male_06_shirt_tie.mdl",
+--         "models/player/Suits/male_07_shirt_tie.mdl",
+--         "models/player/Suits/male_09_shirt_tie.mdl",
+--     },
+--     description = [[Internal Affairs Agents work within the Department of Internal Affairs.
 
-The Department of Internal Affairs (DIA) maintains the integrity of the Foundation. They perform internal investigations (either covert or public) in order to uncover corruption, breach of protocol, and other violations. They may perform investigations on behalf of the Overseer Council or the Ethics Committee.
+-- The Department of Internal Affairs (DIA) maintains the integrity of the Foundation. They perform internal investigations (either covert or public) in order to uncover corruption, breach of protocol, and other violations. They may perform investigations on behalf of the Overseer Council or the Ethics Committee.
 
-All DIA members are expected to read the DIA manuals located in the SCiPNET computer system. Failure to follow these manuals may result in your ability to run operations being revoked.
-]],
-    weapons = {"vguns_silverghost", "vguns_p90", "dradio", "gmod_camera", "weapon_cuff_elastic", "weapon_r_handcuffs", "vkeycard_level_3", "vwar_scp_personnel_tablet", "vclipboard", "vwar_id_card_spy_team", "weaponchecker"},
-    command = "dia_agent",
-    max = 5,
-    admin = 0,
-    salary = 80,
-    hasLicense = false,
-    candemote = false,
-    category = "Site Affairs",
-    VWarTeam = "foundation",
-    PassiveXP = SUPPORT,
-    VWarHelmetCam = true,
-    VWarHelmetCamClearance = 3,
-    VWarDeploymentSpots = {
-        ["Facility Entrance"] = true,
-    },
-	VWarAllLevel = 10,
-	VWarAllLevelsExcept = {
-		["scp"] = true,
-	},
-    VWarSkin = 1,
-    VComputersPrinterCreditRefundTime = 60 * 20,
-    VComputersDocument = "foundation/global_operations_database/manuals/internal_affairs/7189927",
-    JobNickConfig = "Agent",
-})
+-- All DIA members are expected to read the DIA manuals located in the SCiPNET computer system. Failure to follow these manuals may result in your ability to run operations being revoked.
+-- ]],
+--     weapons = {"vguns_silverghost", "vguns_p90", "dradio", "gmod_camera", "weapon_cuff_elastic", "weapon_r_handcuffs", "vkeycard_level_3", "vwar_scp_personnel_tablet", "vclipboard", "vwar_id_card_spy_team", "weaponchecker"},
+--     command = "dia_agent",
+--     max = 5,
+--     admin = 0,
+--     salary = 80,
+--     hasLicense = false,
+--     candemote = false,
+--     category = "Site Affairs",
+--     VWarTeam = "foundation",
+--     PassiveXP = SUPPORT,
+--     VWarHelmetCam = true,
+--     VWarHelmetCamClearance = 3,
+--     VWarDeploymentSpots = {
+--         ["Facility Entrance"] = true,
+--     },
+-- 	VWarAllLevel = 10,
+-- 	VWarAllLevelsExcept = {
+-- 		["scp"] = true,
+-- 	},
+--     VWarSkin = 1,
+--     VComputersPrinterCreditRefundTime = 60 * 20,
+--     VComputersDocument = "foundation/global_operations_database/manuals/internal_affairs/7189927",
+--     JobNickConfig = "Agent",
+-- })
 
-TEAM_DIA_OPERATIVE = AddExtraTeam("Internal Affairs Operative", {
-    color = Color(128,0,0),
-    model = {
-        "models/player/Suits/male_08_shirt_tie.mdl",
-        "models/player/Suits/male_01_shirt_tie.mdl",
-        "models/player/Suits/male_02_shirt_tie.mdl",
-        "models/player/Suits/male_03_shirt_tie.mdl",
-        "models/player/Suits/male_04_shirt_tie.mdl",
-        "models/player/Suits/male_05_shirt_tie.mdl",
-        "models/player/Suits/male_06_shirt_tie.mdl",
-        "models/player/Suits/male_07_shirt_tie.mdl",
-        "models/player/Suits/male_09_shirt_tie.mdl",
-    },
-    description = [[Internal Affairs Agents are combat agents within the Department of Internal Affairs.
+-- TEAM_DIA_OPERATIVE = AddExtraTeam("Internal Affairs Operative", {
+--     color = Color(128,0,0),
+--     model = {
+--         "models/player/Suits/male_08_shirt_tie.mdl",
+--         "models/player/Suits/male_01_shirt_tie.mdl",
+--         "models/player/Suits/male_02_shirt_tie.mdl",
+--         "models/player/Suits/male_03_shirt_tie.mdl",
+--         "models/player/Suits/male_04_shirt_tie.mdl",
+--         "models/player/Suits/male_05_shirt_tie.mdl",
+--         "models/player/Suits/male_06_shirt_tie.mdl",
+--         "models/player/Suits/male_07_shirt_tie.mdl",
+--         "models/player/Suits/male_09_shirt_tie.mdl",
+--     },
+--     description = [[Internal Affairs Agents are combat agents within the Department of Internal Affairs.
 
-The Department of Internal Affairs (DIA) maintains the integrity of the Foundation. They perform internal investigations (either covert or public) in order to uncover corruption, breach of protocol, and other violations. They may perform investigations on behalf of the Overseer Council or the Ethics Committee.
+-- The Department of Internal Affairs (DIA) maintains the integrity of the Foundation. They perform internal investigations (either covert or public) in order to uncover corruption, breach of protocol, and other violations. They may perform investigations on behalf of the Overseer Council or the Ethics Committee.
 
-All DIA members are expected to read the DIA manuals located in the SCiPNET computer system. Failure to follow these manuals may result in your ability to run operations being revoked.
-]],
-    weapons = {"vguns_mpx", "vguns_silverghost", "dradio", "gmod_camera", "weapon_cuff_elastic", "weapon_r_handcuffs", "vkeycard_level_3", "vwar_scp_personnel_tablet", "vclipboard", "vwar_id_card_spy_team", "weaponchecker"},
-    command = "dia_operative",
-    max = 5,
-    admin = 0,
-    salary = 80,
-    hasLicense = false,
-    candemote = false,
-    category = "Site Affairs",
-    VWarTeam = "foundation",
-    PassiveXP = SUPPORT,
-    VWarHelmetCam = true,
-    VWarHelmetCamClearance = 3,
-    VWarDeploymentSpots = {
-        ["Facility Entrance"] = true,
-    },
-	CustomCheckFailMsg = "You need to be at least Keter VIP to play this job!",
-    customCheck = function(ply)
-        return ply:AtLeastRanked("Keter VIP")
-    end,
-    VWarSkin = 1,
-    VComputersPrinterCreditRefundTime = 60 * 20,
-    VComputersDocument = "foundation/global_operations_database/manuals/internal_affairs/7189927",
-    JobNickConfig = "Agent",
-})
+-- All DIA members are expected to read the DIA manuals located in the SCiPNET computer system. Failure to follow these manuals may result in your ability to run operations being revoked.
+-- ]],
+--     weapons = {"vguns_mpx", "vguns_silverghost", "dradio", "gmod_camera", "weapon_cuff_elastic", "weapon_r_handcuffs", "vkeycard_level_3", "vwar_scp_personnel_tablet", "vclipboard", "vwar_id_card_spy_team", "weaponchecker"},
+--     command = "dia_operative",
+--     max = 5,
+--     admin = 0,
+--     salary = 80,
+--     hasLicense = false,
+--     candemote = false,
+--     category = "Site Affairs",
+--     VWarTeam = "foundation",
+--     PassiveXP = SUPPORT,
+--     VWarHelmetCam = true,
+--     VWarHelmetCamClearance = 3,
+--     VWarDeploymentSpots = {
+--         ["Facility Entrance"] = true,
+--     },
+-- 	CustomCheckFailMsg = "You need to be at least Keter VIP to play this job!",
+--     customCheck = function(ply)
+--         return ply:AtLeastRanked("Keter VIP")
+--     end,
+--     VWarSkin = 1,
+--     VComputersPrinterCreditRefundTime = 60 * 20,
+--     VComputersDocument = "foundation/global_operations_database/manuals/internal_affairs/7189927",
+--     JobNickConfig = "Agent",
+-- })
 
 ///////////////////
 // Surface Zone //
