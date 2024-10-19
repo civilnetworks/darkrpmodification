@@ -509,48 +509,48 @@ TEAM_COMBAT_MEDIC = AddExtraTeam("Combat Medic", {
     JobNickConfig = "Doctor",
 })
 
-TEAM_CHEMIST = AddExtraTeam("Chemist", {
-    color = Color(255, 180, 100, 255),
-    model = {
-        "models/worker/chemwork_02.mdl",
-        "models/worker/chemwork_04.mdl",
-        "models/worker/chemwork_05.mdl",
-        "models/worker/chemwork_06.mdl",
-        "models/worker/chemwork_07.mdl",
-        "models/worker/chemwork_08.mdl",
-        "models/worker/chemwork_09.mdl",
-        "models/worker/chemwork_10.mdl",
-    },
-    description = [[Chemists are mid-level members of medical staff. They work with doctors to create prescriptions for patients, by creating drugs and other useful medical devices.
+-- TEAM_CHEMIST = AddExtraTeam("Chemist", {
+--     color = Color(255, 180, 100, 255),
+--     model = {
+--         "models/worker/chemwork_02.mdl",
+--         "models/worker/chemwork_04.mdl",
+--         "models/worker/chemwork_05.mdl",
+--         "models/worker/chemwork_06.mdl",
+--         "models/worker/chemwork_07.mdl",
+--         "models/worker/chemwork_08.mdl",
+--         "models/worker/chemwork_09.mdl",
+--         "models/worker/chemwork_10.mdl",
+--     },
+--     description = [[Chemists are mid-level members of medical staff. They work with doctors to create prescriptions for patients, by creating drugs and other useful medical devices.
 	
-	All members of medical staff are expected to read the medical manuals located in the SCiPNET computer system. Failure to follow these manuals may result in your ability to treat patients being revoked.
-]],
-    weapons = {"vwar_first_aid_kit", "vclipboard", "vwar_field_kit", "vkeycard_level_2", "vwar_scp_personnel_tablet", "weapon_lordi_defib"},
-    command = "chemist",
-    max = 5,
-    admin = 0,
-    salary = 60,
-    hasLicense = false,
-    candemote = false,
-    category = "Medical Staff",
-    VWarTeam = "foundation",
-    VWarDeploymentSpots = {
-        ["Facility Medical"] = true,
-    },
-    VWarBodygroups = {
-        [3] = 1, // Gloves
-        [5] = 1, // Mask
-    },
-    PassiveXP = SUPPORT,
-    VWarSCPZombieType = medicZombieType,
-    VComputersDocument = "foundation/global_operations_database/manuals/medical/279406",
+-- 	All members of medical staff are expected to read the medical manuals located in the SCiPNET computer system. Failure to follow these manuals may result in your ability to treat patients being revoked.
+-- ]],
+--     weapons = {"vwar_first_aid_kit", "vclipboard", "vwar_field_kit", "vkeycard_level_2", "vwar_scp_personnel_tablet", "weapon_lordi_defib"},
+--     command = "chemist",
+--     max = 5,
+--     admin = 0,
+--     salary = 60,
+--     hasLicense = false,
+--     candemote = false,
+--     category = "Medical Staff",
+--     VWarTeam = "foundation",
+--     VWarDeploymentSpots = {
+--         ["Facility Medical"] = true,
+--     },
+--     VWarBodygroups = {
+--         [3] = 1, // Gloves
+--         [5] = 1, // Mask
+--     },
+--     PassiveXP = SUPPORT,
+--     VWarSCPZombieType = medicZombieType,
+--     VComputersDocument = "foundation/global_operations_database/manuals/medical/279406",
 
-    CustomCheckFailMsg = "You need to be at least Thaumiel VIP to play this job!",
-    customCheck = function(ply)
-        return ply:AtLeastRanked("Thaumiel VIP")
-    end,
-    JobNickConfig = "Doctor",
-})
+--     CustomCheckFailMsg = "You need to be at least Thaumiel VIP to play this job!",
+--     customCheck = function(ply)
+--         return ply:AtLeastRanked("Thaumiel VIP")
+--     end,
+--     JobNickConfig = "Doctor",
+-- })
 
 TEAM_MEDIC_CHIEF = AddExtraTeam("Chief of Medicine", {
     color = Color(255, 180, 100, 255),
