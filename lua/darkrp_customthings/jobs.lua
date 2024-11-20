@@ -374,6 +374,7 @@ The ERT will be deployed to the facility when a catastrophic breach cannot be ha
     VWarTeam = "foundation",
     VWarGasMask = 3,
     VWarImmuneToNeedles = true,
+    VWarElectrician = true,
     PassiveXP = COMBAT,
     SCPDamageBuff = 2,
     SCP173Immunity = true,
