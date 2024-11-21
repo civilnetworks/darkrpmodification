@@ -615,7 +615,6 @@ GM.Config.DefaultWeapons = {
     "weapon_physcannon",
 	"weapon_fists",
 	"vwar_shovel",
-	"dradio",
 	"vwar_animations",
 }
 
