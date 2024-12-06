@@ -96,8 +96,10 @@ local function AddEntities()
                 or ply:Team() == TEAM_SRGU_SENIOR_COMMISSIONED_OFFICER
                 or ply:Team() == TEAM_SRGU_SENIOR_COMMISSIONED_OFFICER
                 or ply:Team() == TEAM_SGRU_REGIMENTAL_COMMANDER
-		or ply:Team() == TEAM_SSHC_47TH_JOINT_SPECIAL_OPERATIONS_COMMANDER
-		or ply:Team() == TEAM_NATO_HC_ROYAL_SPECOPS_BRIGADE_COMMANDER
+                or ply:Team() == TEAM_SSHC_47TH_JOINT_SPECIAL_OPERATIONS_COMMANDER
+                or ply:Team() == TEAM_NATO_HC_ROYAL_SPECOPS_BRIGADE_COMMANDER
+                or ply:Team() == TEAM_NATO_HC_RMP_REGIMENTAL_GENERAL
+                or ply:Team() == TEAM_UHC_KGB_REGIMENTAL_GENERAL
         end,
         CustomCheckFailMsg = function(ply, entTable) 
             return "You must be a SNCO+ in a police or special forces regiment to buy this chemical!" 
@@ -178,6 +180,8 @@ local function AddEntities()
                 or ply:Team() == TEAM_KGB_REGIMENTAL_COMMANDER
                 or ply:Team() == TEAM_KGB_DRONE_OPERATOR
                 or ply:Team() == TEAM_RMP_DRONE_OPERATOR
+                or ply:Team() == TEAM_NATO_HC_RMP_REGIMENTAL_GENERAL
+                or ply:Team() == TEAM_UHC_KGB_REGIMENTAL_GENERAL
         end,
         CustomCheckFailMsg = function(ply, entTable) 
             return "You must be a police SNCO+ to use the Police Drone!" 
