@@ -113,7 +113,7 @@ DarkRP.createCategory{
     sortOrder = 101,
 }
 DarkRP.createCategory{
-    name = "USSR Stavka of the Supreme High Command",
+    name = "USSR High Command",
     categorises = "jobs",
     startExpanded = false,
     color = nwoColor,
@@ -129,7 +129,7 @@ DarkRP.createCategory{
     sortOrder = 99,
 }
 DarkRP.createCategory{
-    name = "USSR Spetsnaz GRU",
+    name = "USSR Alpha Group",
     categorises = "jobs",
     startExpanded = false,
     color = nwoColor,
@@ -145,7 +145,7 @@ DarkRP.createCategory{
     sortOrder = 97,
 }
 DarkRP.createCategory{
-    name = "USSR Airborne Trooper Regiment",
+    name = "USSR Airborne Troopers Regiment",
     categorises = "jobs",
     startExpanded = false,
     color = nwoColor,
@@ -153,7 +153,7 @@ DarkRP.createCategory{
     sortOrder = 96,
 }
 DarkRP.createCategory{
-    name = "USSR 11th Guards Mechanized Regiment",
+    name = "USSR 10th Steel Division",
     categorises = "jobs",
     startExpanded = false,
     color = nwoColor,
