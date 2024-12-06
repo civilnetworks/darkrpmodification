@@ -11,7 +11,7 @@ AddDoorGroup("NAME OF THE GROUP HERE, you will see this when looking at a door",
 
 local function AddDoorGroups()
 
-	AddDoorGroup("CRIMSON BLADE",
+	AddDoorGroup("TERRORIST",
 	TEAM_CRIMSON_BLADE,
 	TEAM_CRIMSON_BLADE_AUTORIFLEMAN,
 	TEAM_CRIMSON_BLADE_BANDIT,
@@ -21,7 +21,7 @@ local function AddDoorGroups()
 	TEAM_CRIMSON_SOLDIER
 )
 
-AddDoorGroup("Crimson Blade",
+AddDoorGroup("Terrorist",
 	TEAM_CRIMSON_BLADE,
 	TEAM_CRIMSON_BLADE_AUTORIFLEMAN,
 	TEAM_CRIMSON_BLADE_BANDIT,
